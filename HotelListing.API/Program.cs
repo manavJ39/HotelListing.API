@@ -14,7 +14,7 @@ builder.Services.AddCors(option =>
     option.AddPolicy("AllowAll", b => b.AllowAnyHeader().AllowAnyOrigin().AllowAnyMethod());
 });
 
-builder.Host.UseSerilog((ctx, lc) => lc.WriteTo.Console().ReadFrom.Conffiguration(ctx.Configuration));
+builder.Host.UseSerilog((ctx, lc) => lc.WriteTo.Console().ReadFrom.Configuration(ctx.Configuration));
 
 var app = builder.Build();
 
