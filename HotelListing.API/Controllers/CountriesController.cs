@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using HotelListing.API.Data;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HotelListing.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CountriesController : ControllerBase
     {
         private readonly HotelListingDbContext _context;

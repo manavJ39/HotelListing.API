@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HotelListing.API.Contracts;
 using HotelListing.API.Data;
 
 namespace HotelListing.API.Configuration
@@ -8,6 +9,8 @@ namespace HotelListing.API.Configuration
         public MapperConfig() 
         {
             CreateMap<Country, CountryDto>().ReverseMap();
+            CreateMap<ApiUser,ApiUserDto>().ReverseMap();
+            CreateMap<ApiUser, LoginDto>().ReverseMap();
 
         }
     }
